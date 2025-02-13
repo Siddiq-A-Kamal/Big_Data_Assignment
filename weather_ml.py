@@ -44,8 +44,8 @@ pdf = predictions.select("Elevation", "TMAX", "prediction").toPandas()
 
 # Visualization
 plt.figure(figsize=(8,6))
-plt.scatter(pdf["Elevation"], pdf["TMAX"], color='blue', label="Actual TMAX")
-plt.scatter(pdf["Elevation"], pdf["prediction"], color='red', label="Predicted TMAX")
+plt.hist(pdf["Elevation"], pdf["TMAX"], color='blue', label="Actual TMAX")
+plt.hist(pdf["Elevation"], pdf["prediction"], color='blue', label="Predicted TMAX")
 plt.xlabel("Elevation (m)")
 plt.ylabel("Temperature Max (Â°C)")
 plt.legend()
